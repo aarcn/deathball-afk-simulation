@@ -5,7 +5,7 @@ from collections import Counter
 
 time_in_seconds = 365 * 86400  # how long the simulation will run (86400 secs = 24 hrs)
 number_of_drops = time_in_seconds // 7
-double_luck = True  # (True = double luck activated) (False = no double luck)
+double_luck = False  # (True = double luck activated) (False = no double luck)
 
 # sell_value was only applied to auras that have a good chance of selling on market
 # sell_value is the average price according to death-ball.fandom.com/wiki/Auras
@@ -81,7 +81,7 @@ for aura_name in drop_counts.keys():
     print(f"{aura_name:<13} | {count}")
 
 if double_luck:
-    print("\nTotals (With Double Gems and Double Luck):")
+    print("\nTotals (With Double Gems and Double Luck)")
     print(f"Cost of Double Gems: {total_double_gems_cost}")
     print(f"Cost of Double Luck: {total_double_luck_cost}")
     print(f"Total Gems Collected: {total_gems}")
@@ -90,7 +90,7 @@ if double_luck:
     print(f"Combined Total (Gems + Sell Income) After Fruit Costs: {c_total_with_both_fruits}")
 
 else:
-    print("\nTotals (With Double Gems):")
+    print("\nTotals (With Double Gems)")
     print(f"Cost of Double Gems: {total_double_gems_cost}")
     print(f"Total Gems Collected: {total_gems}")
     print(f"Total Sell Income: {total_sell_income}")
